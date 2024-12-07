@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predición de Visa</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Formulario de solicitud de visa</h1>
+    <form action="/predict" method="post">
+        <label for="Edad">Edad:</label>
+        <input type="number"  name="Edad" required><br>
+        <label for="País de origen">País de origen:</label>
+        <input type="País de origen"  name="País de origen" required><br>
+        <label for="Motivo del viaje">Motivo del viaje:</label>
+        <select name="Motivo del viaje" required>
+            <option value="Estudios">Estudios</option>
+            <option value="Negocios">Negocios</option>
+            <option value="Turismo">Turismo</option>
+            <option value="Trabajo">Trabajo</option>
+        </select><br>
+        <label for="Historial laboral">Historial laboral:</label>
+        <select name="Historial laboral" required>
+            <option value="Empleado">Empleado</option>
+            <option value="Desempleado">Desempleado</option>
+            <option value="Estudiante">Estudiante</option>
+        </select><br>
+        <label for="Nivel educación">Nivel educación:</label>
+        <select name="Nivel educación" required>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Licenciatura">Licenciatura</option>
+            <option value="Maestría">Maestría</option>
+            <option value="Doctorado">Doctorado</option>
+        </select><br>
+        <label for="Antecedentes penales">Antecedentes penales:</label>
+        <select name="Antecedentes penales" required>
+            <option value="No">No</option>
+            <option value="Sí">Sí</option>
+        </select><br>
+        <label for="Ingresos anuales (USD)">Ingresos anuales (USD):</label>
+        <input type="number"  name="Ingresos anuales (USD)" required><br>
+        <label for="Dominio del idioma">Dominio del idioma:</label>
+        <select name="Dominio del idioma" required>
+            <option value="Bajo">Bajo</option>
+            <option value="Medio">Medio</option>
+            <option value="Alto">Alto</option>
+        </select><br>
+        <label for="Tipo de visa">Tipo de visa:</label>
+        <select name="Tipo de visa" required>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Negocios">Negocios</option>
+            <option value="Turista">Turista</option>
+            <option value="Trabajo">Trabajo</option>
+        </select><br>
+
+        <label for="Duración (días)">Duración (días):</label>
+        <input type="number"  name="Duración (días)" required><br>
+       
+        <input type="submit" value="Predecir">
+    </form>
+    
+</body>
+</html>

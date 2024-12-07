@@ -1,3 +1,4 @@
+Python 3.12.1
 virtualenv visa_env
 activar
 visa_env\Scripts\activate
@@ -23,3 +24,10 @@ pip freeze > requirements.txt
 
 
 categorical_cols = data.select_dtypes(include=['object', 'category']).columns
+git init  
+git add .
+git commit -m "proyecto visas v1"
+git remote add origin https://github.com/lfernandogh75/visa_proyecto.git
+
+crear app.py
+pip install flask joblib
